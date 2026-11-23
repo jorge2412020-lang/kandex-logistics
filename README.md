@@ -1,6 +1,9 @@
-# KANDEX LOGISTICS — Web 0.3.0
+# KANDEX LOGISTICS — Web 0.3.1
 
 Aplicación de Logística enfocada en computadora. Abre directamente en https://jorge2412020-lang.github.io/kandex-logistics/ y guarda el catálogo en ese navegador, sin enviar materiales o fotografías a GitHub. La versión instalable para PC se evaluará después de validar esta web.
+
+## Corrección 0.3.1
+Desde el catálogo selecciona **rack / zona → nivel → posición** y guarda una sola vez. El plano y la disponibilidad se actualizan automáticamente. Puedes cambiar la ubicación desde la misma ficha; el lugar anterior queda libre. Las posiciones ocupadas por otros materiales aparecen deshabilitadas, y la operación se vuelve a validar al guardar. Primero crea los racks en Mi almacén.
 
 ## Novedades
 - **Mi almacén:** plano superior con racks que se pueden mover, girar, renombrar y dimensionar. Modo Consulta y modo Edición; guardar/cancelar distribución. Evita superposiciones.
@@ -8,7 +11,7 @@ Aplicación de Logística enfocada en computadora. Abre directamente en https://
 - **Capacidad real:** muestra posiciones ocupadas, disponibles y rack lleno. Una posición admite un material distinto; no es cantidad de piezas ni capacidad de carga/peso.
 - **Proyectos:** registra varios proyectos separados por coma (Volvo, Rivian, BMW). Filtra el plano y las posiciones; la disponibilidad siempre considera todos los proyectos.
 - **Asignación y reubicación:** selecciona una posición libre, busca el material y asígnalo. Reubicar actualiza la ficha y libera el origen en una sola transacción. No admite doble ocupación ni reducir/eliminar posiciones ocupadas.
-- **Sin ubicación en el plano:** lista los materiales todavía no vinculados. Las ubicaciones antiguas escritas a mano se conservan y no se interpretan automáticamente al crear un rack. Revisa y vincula cada material a su posición; elimina una ubicación manual antigua desde su ficha si ya no aplica.
+- **Sin ubicación en el plano:** lista los materiales todavía no vinculados. Las ubicaciones anteriores se vinculan automáticamente al abrir la app o guardar el plano si coinciden con un rack único y una posición válida, sin conflictos. Las ambiguas se conservan sin vincular para revisarlas.
 - **Ficha imprimible:** fotografía principal, parte, nombre, características, proyectos, ubicaciones, datos opcionales y actualización. Vista previa blanca, tamaño carta y opción de PDF en el diálogo del navegador. Los textos largos pueden ocupar más de una hoja.
 - **Respaldo completo JSON v2:** materiales, fotos, proyectos, plano, niveles, capacidades y asignaciones. Recupera también los respaldos web anteriores v1 (sin plano). Antes de reemplazar los datos muestra fecha y cantidades y solicita descargar un respaldo previo.
 
